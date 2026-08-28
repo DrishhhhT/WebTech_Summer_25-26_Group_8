@@ -1,0 +1,212 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #1b120d;
+    color: white;
+    font-family: Arial;
+}
+
+
+/* SIDEBAR */
+
+.sidebar
+{
+    width: 190px;
+    height: 100vh;
+    background-color: #080808;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+.sidebar h2
+{
+    text-align: center;
+    color: #ff7a2f;
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+
+.sidebar a
+{
+    display: block;
+    padding: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+
+.sidebar a:hover
+{
+    background-color: #ff4d0a;
+}
+
+
+.sidebar .active
+{
+    background-color: #ff1f16;
+}
+
+
+/* MAIN CONTENT */
+
+.main
+{
+    margin-left: 190px;
+    padding: 30px;
+}
+
+
+.main h1
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* ADD MENU BOX */
+
+.menu-box
+{
+    background-color: #3c2b1f;
+    padding: 35px;
+    border-radius: 12px;
+    border: 2px solid #ff5a14;
+}
+
+
+.menu-box table
+{
+    width: 450px;
+}
+
+
+.menu-box td
+{
+    padding: 10px;
+}
+
+
+input[type="text"],
+select
+{
+    width: 240px;
+    padding: 10px;
+    border: 1px solid #ff7a2f;
+    border-radius: 5px;
+}
+
+
+/* BUTTONS */
+
+input[type="submit"],
+input[type="reset"]
+{
+    padding: 12px 25px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+input[type="submit"]
+{
+    background-color: #ff5a14;
+    color: white;
+}
+
+
+input[type="reset"]
+{
+    background-color: #555;
+    color: white;
+}
+
+
+input[type="submit"]:hover
+{
+    background-color: #ff7a2f;
+}
+
+
+/* SEARCH BOX */
+
+.search-box
+{
+    margin-top: 25px;
+    background-color: #3c2b1f;
+    padding: 25px;
+}
+
+
+.search-box h2
+{
+    margin-top: 0;
+}
+
+
+.search-box input[type="text"]
+{
+    width: 250px;
+}
+
+
+/* MENU LIST */
+
+.list-box
+{
+    margin-top: 25px;
+    background-color: #3c2b1f;
+    padding: 20px;
+}
+
+
+.list-box table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.list-box th
+{
+    background-color: #000;
+    color: white;
+    padding: 12px;
+}
+
+
+.list-box td
+{
+    background-color: #eee;
+    color: #222;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #999;
+}
+
+
+/* EDIT BUTTON */
+
+.edit
+{
+    background-color: green;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+
+/* DELETE BUTTON */
+
+.delete
+{
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+}
