@@ -1,0 +1,648 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box{
+    width: 350px;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border: 2px solid orange;
+    border-radius: 15px;
+    text-align: center;
+}
+
+h1{
+    color: orange;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.subtitle{
+    color: white;
+    font-family: cursive;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label{
+    color: orange;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"]{
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+    outline: none;
+    background-color: #333;
+}
+
+
+input[type="submit"]{
+    background-color: orange;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover{
+    background-color: white;
+}
+
+.divider{
+    margin: 20px 0;
+    color: gray;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.divider::before,
+.divider::after{
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid gray;
+}
+
+.divider span{
+    margin: 0 10px;
+}
+
+.signup-text{
+    color: white;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.signup-btn{
+    display: block;
+    background-color: black;
+    color: orange;
+    border: 2px solid orange;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.signup-btn:hover{
+    background-color: orange;
+    color: black;
+}
+
+/* Error Message */
+#studentid-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+#password-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* Staff and admin login butoon */
+.staff-admin-row{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+.mini-btn{
+    flex: 1;
+    background-color: black;
+    color: orange;
+    border: 1px solid orange;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mini-btn:hover{
+    background-color: orange;
+    color: black;
+}
+
+/* Sign Up */
+input[type="email"]{
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+input[type="email"]:focus{
+    outline: none;
+    background-color: #333;
+}
+
+/* Error Messages */
+#studentid-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+#name-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+#email-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+#password-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+#confirmpassword-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+/* Staff/Admin login */
+.note{
+    color: gray;
+    font-size: 12px;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Admin Name Error */
+#adminid-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.error-msg{
+    color: white;
+    font-size: 12px;
+    margin-top: 3px;
+}
+/* Staff Name Error */
+#staffid-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* Admin dashboard login */
+.hidden{
+    display: none;
+}
+
+.dashboard-body{
+    background-color: #111;
+    display: block;
+    padding: 0;
+}
+
+.dashboard-wrapper{
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width: 220px;
+    background-color: black;
+    border-right: 2px solid orange;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-title{
+    color: orange;
+    font-size: 22px;
+}
+
+.sidebar-subtitle{
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+    padding: 12px 10px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.nav-link:hover{
+    background-color: #222;
+}
+
+.nav-link.active{
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+.logout-link{
+    margin-top: auto;
+    color: orange;
+    text-decoration: none;
+    border: 1px solid orange;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.logout-link:hover{
+    background-color: orange;
+    color: black;
+}
+
+/* Main content */
+.main-content{
+    flex: 1;
+    padding: 30px 40px;
+}
+
+.main-content h1{
+    color: orange;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+/* Tabs */
+.tab-buttons{
+    margin-bottom: 15px;
+}
+
+.tab-btn{
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid orange;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tab-btn:first-child{
+    border-radius: 8px 0 0 8px;
+}
+
+.tab-btn:last-child{
+    border-radius: 0 8px 8px 0;
+}
+
+.tab-btn.active{
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* Tables */
+.data-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.data-table th,
+.data-table td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    color: white;
+    font-size: 14px;
+}
+/* Titles */
+.main-content h3{
+    color: orange;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.data-table th{
+    background-color: orange;
+    color: black;
+}
+
+.action-link{
+    color: orange;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.action-link.delete{
+    color: #ff5c5c;
+}
+
+/* Add button */
+.add-btn{
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-btn:hover{
+    background-color: white;
+}
+
+/* Inline form Add Staff */
+.inline-form{
+    background-color: #1a1a1a;
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+}
+
+/* New staff ID Error */
+#newstaffid-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* New staff name Error */
+#newstaffname-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+#newstaffemail-error,
+#newstaffpass-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.inline-form label{
+    color: orange;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.inline-form input{
+    padding: 8px;
+    border: 1px solid orange;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+}
+
+.inline-form input[type="submit"]{
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Reports */
+.report-box{
+    background-color: #1a1a1a;
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.report-box h3{
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.placeholder-text{
+    color: gray;
+    font-style: italic;
+}
+
+/* Order status badges */
+.status{
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.preparing{
+    background-color: #444;
+    color: orange;
+}
+
+.status.completed{
+    background-color: green;
+    color: white;
+}
+
+form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    margin-bottom: 5px;
+}
+
+form textarea:focus{
+    outline: none;
+    background-color: #333;
+}
+
+.past-reviews{
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.past-reviews h3{
+    color: orange;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+.page-main{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+/* Header */
+.site-header{
+    background-color: orange;
+    padding: 14px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo svg{
+    flex-shrink: 0;
+}
+
+
+.logo svg circle,
+.logo svg path{
+    stroke: black;
+}
+
+.logo-text{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 0.5px;
+}
+
+.logo-highlight{
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Footer */
+.site-footer{
+    background-color: orange;
+    padding: 20px 30px 16px;
+}
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    margin-bottom: 14px;
+}
+
+.footer-item{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.footer-item:hover{
+    text-decoration: underline;
+}
+
+.footer-item svg{
+    flex-shrink: 0;
+}
+
+.footer-item svg path,
+.footer-item svg circle,
+.footer-item svg rect{
+    stroke: black;
+}
+
+.footer-copy{
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 11px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 480px){
+    .site-header{
+        justify-content: center;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        gap: 14px;
+    }
+}
