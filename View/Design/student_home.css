@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #150F0A;
+    color: #F6EFE3;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* ================= PAGE LAYOUT ================= */
+
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    background-color: #1B140D;
+    border-right: 1px solid #2C2117;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 0 6px;
+}
+
+
+.sidebar-brand .mark {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #E8792A;
+}
+
+
+.sidebar-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.side-link {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #B7A78E;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.side-link:hover {
+    background-color: #2C2117;
+    color: #F6EFE3;
+}
+
+
+.side-link.active {
+    background-color: #E8792A;
+    color: #1B140D;
+}
+
+
+
+/*  MAIN SCREEN  */
+
+#screen-wrap {
+    flex: 1;
+    min-width: 0;
+    max-width: 1200px;
+    padding: 28px;
+}
+
+
+
+/* HERO */
+
+.home-hero {
+    text-align: center;
+    padding: 20px 0 6px;
+    margin-bottom: 4px;
+}
+
+
+.home-hero h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.home-hero p {
+    color: #B7A78E;
+    font-size: 13.5px;
+    margin-top: 6px;
+}
+
+
+
+/* MENU LABEL */
+
+
+.tabs-row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+
+.menu-label {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 100px;
+    background-color: #E8792A;
+    color: #1B140D;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+
+/*  MENU LIST  */
+
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.menu-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 6px;
+    border-bottom: 1px solid #2C2117;
+}
+
+
+.menu-row:first-child {
+    border-top: 1px solid #2C2117;
+}
+
+
+.menu-row .info {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.menu-row .name {
+    font-weight: bold;
+    font-size: 14.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.menu-row .price {
+    font-weight: bold;
+    color: #E9C97E;
+    font-size: 15px;
+    width: 70px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+
+
+/*  QUANTITY STEPPER  */
+
+.qty-stepper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background-color: #382A1B;
+    border: 1px solid #3E2E1D;
+    color: #E9C97E;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.qty-btn:hover {
+    background-color: #E8792A;
+    color: #1B140D;
+}
+
+
+.qty-value {
+    min-width: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #F6EFE3;
+}
+
+
+
+/*
+   PILLS / BADGES
+    */
+
+.pill {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+.pill-gold {
+    background-color: rgba(212, 164, 76, 0.14);
+    color: #E9C97E;
+}
+
+
+.pill-red {
+    background-color: rgba(225, 91, 78, 0.14);
+    color: #E15B4E;
+}
+
+/* ================= CANTEEN SELECT ================= */
+
+.canteen-select-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.canteen-select-label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #B7A78E;
+}
+
+.canteen-select {
+    background-color: #382A1B;
+    border: 1px solid #3E2E1D;
+    color: #F6EFE3;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.canteen-select:hover {
+    border-color: #E8792A;
+}
+
+.empty-menu-msg {
+    color: #B7A78E;
+    font-size: 13.5px;
+    padding: 20px 6px;
+}
+
+
+
+/* ================= ADD TO CART BUTTON ================= */
+
+.add-to-cart-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0 10px;
+}
+
+
+.add-to-cart-btn {
+    height: 48px;
+    padding: 0 32px;
+    border-radius: 14px;
+    border: none;
+    background-color: #E8792A;
+    color: #1B140D;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.add-to-cart-btn:hover {
+    background-color: #F08C3E;
+}
+
+
+
+
+/* Smaller tablet */
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        width: 180px;
+    }
+
+    #screen-wrap {
+        padding: 18px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .page-wrapper {
+        flex-direction: column;
+    }
+
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 16px;
+    }
+
+
+    .sidebar-brand {
+        margin-bottom: 15px;
+    }
+
+
+    .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+
+    .side-link {
+        flex-shrink: 0;
+    }
+
+
+    #screen-wrap {
+        padding: 14px;
+    }
+
+
+    .home-hero {
+        padding: 16px 12px 4px;
+    }
+
+
+    .home-hero h1 {
+        font-size: 23px;
+    }
+
+
+    .menu-row {
+        flex-wrap: wrap;
+    }
+
+
+    .menu-row .price {
+        text-align: left;
+    }
+
+}
