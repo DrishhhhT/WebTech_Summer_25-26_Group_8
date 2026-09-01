@@ -1,0 +1,313 @@
+/* ==========================================================
+   OrderList.css
+   AIUBites - Staff Order List
+   ========================================================== */
+
+
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #150F0A;
+    color: #E9C97E;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* ================= PAGE LAYOUT ================= */
+
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    
+    
+}
+
+
+/*  MAIN SCREEN  */
+
+#screen-wrap {
+    flex: 1;
+    min-width: 0;
+    max-width: 1200px;
+    padding: 28px;
+    align-items: center;
+}
+
+
+
+/* HEADER */
+
+.ol-hero {
+    text-align: center;
+    padding: 20px 0 6px;
+    margin-bottom: 4px;
+     
+}
+
+
+.ol-hero h1 {
+    font-size: 28px;
+    font-weight: bold;
+    align-items: center;
+}
+
+
+.ol-hero p {
+    color: #B7A78E;
+    font-size: 13.5px;
+    margin-top: 6px;
+    align-items: center;
+}
+
+
+
+/* PAGE ACTIONS */
+
+.ol-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 22px;
+}
+
+
+.ol-home-btn {
+    color: #E9C97E;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 9px 16px;
+    border: 1px solid #3E2E1D;
+    border-radius: 10px;
+    background-color: #221A12;
+}
+
+
+.ol-home-btn:hover {
+    background-color: #2C2117;
+}
+
+
+
+/* ORDERS CARD */
+
+.ol-card {
+    background-color: #221A12;
+    border: 1px solid #2C2117;
+    border-radius: 16px;
+    padding: 22px;
+}
+
+
+.ol-card-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+
+.ol-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #E9C97E;
+}
+
+
+.ol-count {
+    margin-left: auto;
+    font-size: 13px;
+    color: #8A7C66;
+}
+
+
+
+/* LIST HEADER ROW */
+
+.ol-list-head {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 2fr 0.9fr 1.1fr;
+    gap: 10px;
+    padding: 0 12px 10px 12px;
+    border-bottom: 1px solid #2C2117;
+    font-size: 11.5px;
+    font-weight: bold;
+    color: #8A7C66;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+
+
+/* ROWS */
+
+.ol-list {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+.ol-row {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 2fr 0.9fr 1.1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 15px 12px;
+    border-bottom: 1px solid #2C2117;
+}
+
+
+.ol-row:last-child {
+    border-bottom: none;
+}
+
+
+.ol-oid {
+    font-size: 13px;
+    font-weight: bold;
+    color: #F6EFE3;
+}
+
+
+.ol-col-customer {
+    font-size: 13px;
+    color: #F6EFE3;
+    font-weight: bold;
+}
+
+
+.ol-col-items {
+    font-size: 13px;
+    color: #B7A78E;
+}
+
+
+.ol-total {
+    font-size: 14px;
+    font-weight: bold;
+    color: #E9C97E;
+}
+
+
+
+/* STATUS BADGES */
+
+.ol-status {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 100px;
+}
+
+
+.ol-status-preparing {
+    background-color: rgba(233, 201, 126, 0.14);
+    color: #E9C97E;
+    border: 1px solid #6B5A2E;
+}
+
+
+.ol-status-pickedup {
+    background-color: rgba(79, 190, 121, 0.14);
+    color: #4FBE79;
+    border: 1px solid #2F5230;
+}
+
+
+.ol-status-cancelled {
+    background-color: rgba(225, 91, 78, 0.14);
+    color: #E15B4E;
+    border: 1px solid #5C2B2B;
+}
+
+
+
+/*
+   RESPONSIVE DESIGN
+    */
+
+
+/* Smaller tablet */
+
+@media (max-width: 900px) {
+
+    .ol-list-head {
+        display: none;
+    }
+
+    .ol-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        background-color: #1B140D;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        border-bottom: none;
+        padding: 14px;
+    }
+
+    .ol-col-items::before {
+        content: "Items: ";
+        color: #8A7C66;
+    }
+
+    .ol-col-customer::before {
+        content: "Customer: ";
+        color: #8A7C66;
+    }
+
+    .ol-total::before {
+        content: "Total: ";
+        color: #8A7C66;
+    }
+
+    .ol-count {
+        margin-left: 0;
+    }
+
+}
+
+
+/* Smaller tablet */
+
+@media (max-width: 750px) {
+
+
+    #screen-wrap {
+        padding: 18px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .page-wrapper {
+        flex-direction: column;
+    }
+
+
+
+    #screen-wrap {
+        padding: 14px;
+    }
+
+
+    .ol-hero h1 {
+        font-size: 23px;
+    }
+
+}
